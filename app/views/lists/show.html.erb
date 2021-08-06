@@ -6,6 +6,7 @@
       <th scope="col">#</th>
       <th scope="col">Title</th>
       <th scope="col">Comment</th>
+      <th scope="col">Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -14,6 +15,7 @@
       <th scope="row"><%= bookmark.id %></th>
       <td><%= bookmark.movie.title %></td>
       <td><%= bookmark.comment %></td>
+      <td><%= link_to "❌", bookmark_path(bookmark.id), method: :delete, data: { confirm: "Are you sure?" } %></td>
     </tr>
     <% end %>
   </tbody>
